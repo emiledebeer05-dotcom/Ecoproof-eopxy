@@ -740,6 +740,15 @@
       .svc-card:nth-child(n) { grid-column: span 1; }
       .process-grid { grid-template-columns: 1fr; }
       .stats-inner { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .name-grid { grid-template-columns: 1fr !important; }
+      .contact-form-card { padding: 1.25rem !important; border-radius: 1rem !important; }
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .name-grid { grid-template-columns: 1fr !important; }
+      .contact-form-card { padding: 1.75rem !important; }
     }
 
     /* ─── MOBILE MENU ───────────────────────────── */
@@ -1220,7 +1229,7 @@
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section id="contact" style="background:#f9fafb;">
   <div class="section">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
 
       <!-- Info -->
       <div>
@@ -1270,11 +1279,11 @@
       </div>
 
       <!-- Form -->
-      <div style="background:#fff;border-radius:1.75rem;padding:2.5rem;border:1px solid rgba(27,58,107,0.08);box-shadow:0 16px 48px -16px rgba(27,58,107,0.1);" class="reveal reveal-delay-1">
+      <div class="contact-form-card reveal reveal-delay-1" style="background:#fff;border-radius:1.75rem;padding:2.5rem;border:1px solid rgba(27,58,107,0.08);box-shadow:0 16px 48px -16px rgba(27,58,107,0.1);">
         <h3 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1.75rem;letter-spacing:-0.01em;">Request a Free Quote</h3>
         <form style="display:flex;flex-direction:column;gap:1.125rem;" onsubmit="handleSubmit(event)">
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="name-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
             <div>
               <label style="display:block;font-size:0.78rem;font-weight:600;color:#374151;margin-bottom:0.375rem;letter-spacing:0.02em;">First Name</label>
               <input type="text" placeholder="Thabo" required style="width:100%;padding:0.75rem 1rem;border:1.5px solid #e5e7eb;border-radius:0.625rem;font-family:'Outfit',sans-serif;font-size:0.9rem;color:#0d1117;outline:none;transition:border-color 0.2s;background:#fafafa;" onfocus="this.style.borderColor='#3D8B1C'" onblur="this.style.borderColor='#e5e7eb'" />
